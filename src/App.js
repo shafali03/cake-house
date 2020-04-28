@@ -3,7 +3,7 @@ import React from 'react'
 //* react router dom
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-// pages
+//! pages
 import About from "./pages/About"
 import Cart from "./pages/Cart"
 import Checkout from "./pages/Checkout"
@@ -13,6 +13,8 @@ import Login from "./pages/Login"
 import Products from "./pages/Products"
 import ProductDetails from "./pages/ProductDetails"
 
+//! components
+import Header from "./components/Header"
 
 
 
@@ -20,6 +22,7 @@ import ProductDetails from "./pages/ProductDetails"
 function App() {
   return (
     <Router>
+      <Header />
       <Switch>
 
         <Route
