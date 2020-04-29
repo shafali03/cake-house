@@ -1,5 +1,5 @@
 :root {
-  
+  --primaryColor: #04A777;
   --maxWidth: 40em;
   --smallWidth: 85vw;
   --fullWidth: 1170px;
@@ -74,3 +74,44 @@ Header
     margin: 0 0.5em;
   }
 }
+
+/*
+=================== 
+button
+===================
+*/
+.btn,
+.btn-primary {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border-radius: 2em;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align: center;
+  /* transition: all 0.2s; */
+  background-color: var(--primaryColor);
+}
+
+.btn:hover {
+  background: var(--primaryColor);
+}
+
+
+
+/*
+=================== 
+Error page
+===================
+*/
+
+.error-page {
+  display: flex;
+  justify-content: center;
+}
+.error-container {
+  text-align: center;
+  text-transform: capitalize;
+}
+
