@@ -1,5 +1,6 @@
 :root {
   --primaryColor: #04A777;
+   --primaryDarkColor: #026F47;
   --maxWidth: 40em;
   --smallWidth: 85vw;
   --fullWidth: 1170px;
@@ -109,7 +110,7 @@ About
   margin: 0 auto;
 }
 .about-section p {
-  line-height: 2rem;
+  line-height: 2em;
   font-weight: 400;
   letter-spacing: 2px;
 }
@@ -140,3 +141,60 @@ Error page
   text-transform: capitalize;
 }
 
+
+/* 
+====== 
+Hero
+======
+*/
+.hero {
+  min-height: calc(65vh);
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(255, 255, 255, 0.1)
+    ),url("./assets/mainBcg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primaryDarkColor);
+}
+.banner {
+  width: var(--smallWidth);
+  max-width: var(--fullWidth);
+}
+.hero h1 {
+  font-size: 3em;
+  text-transform: capitalize;
+}
+.hero p {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 1.75em;
+}
+.btn-hero {
+  
+  font-weight: bold;
+  /* padding: 0.8em 1.5em; */
+
+}
+.btn-hero:hover {
+  color: var(--primaryDarkColor);
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    /* font-size: 1.3em; */
+  }
+  .hero p {
+    font-size: 1.5em;
+  }
+  .btn-hero {
+    font-size: 1.2em;
+    padding: 0.8em 2em;
+  }
+}
