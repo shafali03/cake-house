@@ -16,9 +16,6 @@ import ProductDetails from "./pages/ProductDetails"
 //! components
 import Header from "./components/Header"
 
-
-
-
 function App() {
   return (
     <Router>

@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  
+  --maxWidth: 40em;
+  --smallWidth: 85vw;
+  --fullWidth: 1170px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+=================== 
+Global Styles 
+===================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block
+}
+
+/*
+=================== 
+Header
+===================
+*/
+
+.header {
+  padding: 2em 0;
+}
+.logo {
+  margin: 0 auto;
+  width: 10em;
+}
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  width: var(--smallWidth);
+  margin: 0 auto;
+  margin-top: 2em;
+  max-width: var(--maxWidth);
+}
+.header ul div {
+  display: flex;
+  align-items: center;
+}
+.header a {
+  text-transform: capitalize;
+  margin: 0 0.25em;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .header a {
+    font-size: 1.5em;
+    margin: 0 0.5em;
+  }
 }
