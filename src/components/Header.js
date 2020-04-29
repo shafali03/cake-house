@@ -5,7 +5,7 @@ import logo from "../assets/logo.svg"
 function Header() {
 
   return (
-    <header className="Header">
+    <header className="header">
       <img src={logo} alt="cake shop logo" className="logo" />
       <nav>
         <ul>
@@ -14,15 +14,18 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/About">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/Products">Product</Link>
+              <Link to="/products">Product</Link>
             </li>
           </div>
           <div>
             <li>
               <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
             </li>
           </div>
         </ul>
