@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ProductContext } from '../context/products';
 
 
 function Products() {
+  const { loading, products } = useContext(ProductContext)
+
 
   return (
     <div>
