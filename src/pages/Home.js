@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <Hero>
-        <Link to="/products" className="btn btn-primary btn- hero">
+        <Link to="/products" className="btn btn-primary btn-hero">
           Our Cakes
         </Link>
       </Hero>
