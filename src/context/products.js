@@ -11,9 +11,11 @@ function ProductProvider({ children }) {
   const [featured, setFeatured] = (useState(false))
 
   React.useEffect(() => {
-    axios.get(`${url}/products`).then(storeProducts => console.log(storeProducts))
+    axios.get(`${url}/products`).then(response => {
+      setProducts(response.data)
+    })
     return () => { }
-  })
+  }, [])
 
   return (
     <ProductContext.Provider value={{ loading, products, featured }}>

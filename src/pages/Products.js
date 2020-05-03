@@ -3,7 +3,8 @@ import { ProductContext } from '../context/products';
 
 
 function Products() {
-  const { loading, products } = useContext(ProductContext)
+  const { loading, products } = React.useContext(ProductContext)
+  console.log(products)
 
 
   return (
