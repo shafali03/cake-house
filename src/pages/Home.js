@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from "../components/Hero"
 import { Link } from "react-router-dom"
-
+import FeaturedProducts from '../components/Products/FeaturedProducts'
 
 function Home() {
   return (
@@ -11,6 +11,7 @@ function Home() {
           Our Cakes
         </Link>
       </Hero>
+      <FeaturedProducts />
     </>
 
   )
