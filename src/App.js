@@ -15,6 +15,7 @@ import ProductDetails from "./pages/ProductDetails"
 
 //! components
 import Header from "./components/Header"
+import CartItem from "./components/Cart/CartItem"
 
 function App() {
   return (
