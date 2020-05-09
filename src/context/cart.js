@@ -30,7 +30,12 @@ function CartProvider({ children }) {
   }, [cart])
 
   // remove item
-  const removeItem = id => { }
+  const removeItem = id => {
+    let newCart = [...cart].filter(item => item.id !== id)
+    setCart(newCart)
+    // setCart([...cart].filter(item => item.id !== id))
+
+  }
   // increase amount
   const increaseAmount = id => { }
   // decrease amount
