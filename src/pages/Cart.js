@@ -17,10 +17,10 @@ function Cart() {
 
   return (
     <section className="cart-item section">
-      <h2>your cart</h2>
       {cart.map(item => {
         return <CartItem key={item.id} {...item} />
       })}
+
       <h2>total : £ {total}</h2>
 
       {user ? (
