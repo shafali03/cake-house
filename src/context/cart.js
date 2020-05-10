@@ -62,7 +62,7 @@ function CartProvider({ children }) {
   // add to cart
   const addToCart = id => { }
   // clear cart
-  const clearCart = id => {
+  const clearCart = () => {
     setCart([]);
   }
 
