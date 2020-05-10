@@ -37,7 +37,14 @@ function CartProvider({ children }) {
 
   }
   // increase amount
-  const increaseAmount = id => { }
+  const increaseAmount = id => {
+    const newCart = [...cart].map(item => {
+      return item.id === id
+        ? { ...item, amount: item.amount + 1 }
+        : { ...item }
+    })
+    setCart(newCart)
+  }
   // decrease amount
   const decreaseAmount = id => { }
   // add to cart
