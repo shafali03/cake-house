@@ -8,6 +8,13 @@ yarn add react-stripe-elements
 yarn add react-router-dom
 ```
 
+Installed 
+
+`
+yarn create strapi-app cake-house-store --quickstart
+`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
