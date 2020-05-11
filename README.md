@@ -10,9 +10,23 @@ yarn add react-router-dom
 
 Installed 
 
-`
+```
 yarn create strapi-app cake-house-store --quickstart
-`
+```
+
+Set up Cloudinary
+
+* Open the folder for strapi app cake-house-store
+* Navigated to extension folder
+* Installed the command below
+
+```
+yarn add strapi-provider-upload-cloudinary
+```
+
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
