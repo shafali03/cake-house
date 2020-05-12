@@ -63,6 +63,16 @@ function Login() {
           </div>
         )}
 
+        {/* empty form text */}
+        {
+          isEmpty && (
+            <p className="form-empty">please fill out all form fields</p>
+          )
+        }
+
+
+
+
       </form>
     </section>
   )
