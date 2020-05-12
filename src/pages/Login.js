@@ -33,9 +33,46 @@ function Login() {
         {/* single input */}
         <div className="form-control">
           <label htmlFor="email">email</label>
-          <input type="text" id="email" value={email} onChange={e => setEmail(e.target.value)} />
+          <input
+            type="text"
+            id="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)} />
         </div>
         {/* end of single input */}
+
+        {/* single input */}
+        <div className="form-control">
+          <label htmlFor="password">password</label>
+          <input
+            type="text"
+            id="password"
+            value={password}
+            onChange={e => setPassword(e.target.value)} />
+        </div>
+        {/* end of single input */}
+
+        {!isMember && (
+          <div className="form-control">
+            <label htmlFor="">username</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={e => setUsername(e.target.value)} />
+          </div>
+        )}
+
+        {/* empty form text */}
+        {
+          isEmpty && (
+            <p className="form-empty">please fill out all form fields</p>
+          )
+        }
+
+
+
+
       </form>
     </section>
   )
