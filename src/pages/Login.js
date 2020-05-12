@@ -16,13 +16,31 @@ function Login() {
   const [username, setUsername] = React.useState('default')
   const [isMember, setIsMember] = React.useState(true)
 
-  let isEmpty = false;
+  let isEmpty = !email || !password || !username
 
   const toggleMember = () => {
-
+    setIsMember(prevMember => {
+      console.log(prevMember)
+      let isMember = !prevMember
+      isMember ? setUsername('default') : setUsername('')
+      return isMember
+    })
   }
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
+    let response;
+    if (isMember) {
+      // response = await loginUser
+    }
+    else {
+      // response = await registerUser
+    }
+    if (response) {
+
+    } else {
+      // show alert
+    }
 
   }
 
