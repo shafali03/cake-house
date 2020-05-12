@@ -63,6 +63,7 @@ function Login() {
           </div>
         )}
 
+
         {/* empty form text */}
         {
           isEmpty && (
@@ -70,7 +71,16 @@ function Login() {
           )
         }
 
-
+        {/* submit button  */}
+        {!isEmpty && (
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleSubmit}
+          >
+            submit
+          </button>
+        )}
 
 
       </form>
