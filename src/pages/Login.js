@@ -82,6 +82,15 @@ function Login() {
           </button>
         )}
 
+        {/* register link */}
+        <p className="register-link">
+          {isMember ? "Need To Register" : "Already A Member"}
+          <button type="button" onClick={toggleMember}>
+            click here
+          </button>
+        </p>
+
+
 
       </form>
     </section>
