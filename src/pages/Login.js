@@ -27,9 +27,17 @@ function Login() {
   }
 
   return (
-    <div>
-      <h1>Login page</h1>
-    </div>
+    <section className="form section">
+      <h2 className="section-title">{isMember ? "sign in" : "register"}</h2>
+      <form className="login-form">
+        {/* single input */}
+        <div className="form-control">
+          <label htmlFor="email">email</label>
+          <input type="text" id="email" value={email} onChange={e => setEmail(e.target.value)} />
+        </div>
+        {/* end of single input */}
+      </form>
+    </section>
   )
 }
 
