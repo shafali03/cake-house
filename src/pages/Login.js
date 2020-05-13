@@ -2,6 +2,7 @@ import React from 'react'
 
 // strapi function
 import registerUser from "../strapi/registerUser"
+import loginUser from "../strapi/loginUser"
 
 // handle user 
 import { useHistory } from 'react-router-dom'
@@ -32,7 +33,7 @@ function Login() {
     e.preventDefault();
     let response;
     if (isMember) {
-      // response = await login
+      response = await loginUser({ email, password })
     }
     else {
       response = await registerUser({ email, password, username })
