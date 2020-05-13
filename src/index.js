@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import ProductProvider from './context/products'
 import { CartProvider } from './context/cart'
+import { UserProvider } from './context/user'
 
 
 
@@ -11,11 +12,13 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </ProductProvider>
+    <UserProvider>
+      <ProductProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </ProductProvider>
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
