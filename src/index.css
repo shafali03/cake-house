@@ -460,7 +460,7 @@ Login Form
 }
 .login-form {
   background: var(--mainWhite);
-  padding: 1.25rem 1rem;
+  padding: 1.25em 1em;
   text-transform: capitalize;
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
@@ -473,9 +473,9 @@ Login Form
   width: 100%;
   border: none;
   border-bottom: 2px solid var(--darkGrey);
-  margin-bottom: 1.25rem;
-  padding: 0.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 1.25em;
+  padding: 0.5em;
+  font-size: 1.2em;
 }
 .form-empty {
   text-align: center;
@@ -483,7 +483,7 @@ Login Form
 }
 .register-link {
   margin-bottom: 0;
-  margin-top: 1rem;
+  margin-top: 1em;
   text-align: center;
 }
 .register-link button {
@@ -493,6 +493,6 @@ Login Form
   text-transform: capitalize;
   font-size: inherit;
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 0.5em;
   cursor: pointer;
 }
