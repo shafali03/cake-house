@@ -1,6 +1,6 @@
 import React from 'react'
 
-import localCart from '../utils/localCart'
+// import localCart from '../utils/localCart'
 
 function getCartLocalStorage() {
   return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem("cart"))
@@ -73,12 +73,7 @@ function CartProvider({ children }) {
   const addToCart = product => {
     console.log(product)
 
-    const {
-      id,
-      image,
-      title,
-      price
-    } = product;
+    const { id, image, title, price } = product;
     const item = [...cart].find(item => item.id === id)
     if (item) {
       increaseAmount(id)
@@ -88,8 +83,6 @@ function CartProvider({ children }) {
       const newCart = [...cart, newItem]
       setCart(newCart)
     }
-
-
   }
   // clear cart
   const clearCart = () => {
