@@ -16,6 +16,8 @@ import ProductDetails from "./pages/ProductDetails"
 //! components
 import Header from "./components/Header"
 import Alert from "./components/Alert"
+import PrivateRoute from "./components/PrivateRoute"
+
 
 function App() {
   return (
@@ -39,10 +41,10 @@ function App() {
           <Cart />
         </Route>
 
-        <Route
+        <PrivateRoute
           path="/checkout">
           <Checkout />
-        </Route>
+        </PrivateRoute>
 
         <Route
           path="/login">
