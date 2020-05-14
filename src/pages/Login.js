@@ -1,8 +1,9 @@
 import React from 'react'
 
 // strapi function
-import registerUser from "../strapi/registerUser"
 import loginUser from "../strapi/loginUser"
+import registerUser from "../strapi/registerUser"
+
 
 // handle user 
 import { useHistory } from 'react-router-dom'
@@ -11,8 +12,7 @@ import { UserContext } from '../context/user'
 function Login() {
   const history = useHistory()
   // setup user context
-  const value = React.useContext(UserContext)
-  console.log(value)
+  const { userLogin } = React.useContext(UserContext)
 
   // state values
   const [email, setEmail] = React.useState('')
@@ -24,7 +24,6 @@ function Login() {
 
   const toggleMember = () => {
     setIsMember(prevMember => {
-      console.log(prevMember)
       let isMember = !prevMember
       isMember ? setUsername('default') : setUsername('')
       return isMember
@@ -34,16 +33,22 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let response;
+
     if (isMember) {
       response = await loginUser({ email, password })
     }
     else {
       response = await registerUser({ email, password, username })
     }
-    if (response) {
-      console.log("success")
-      console.log(response)
 
+    if (response) {
+      const {
+        jwt: token,
+        user: { username }
+      } = response.data
+      const newUser = { token, username }
+      userLogin(newUser)
+      history.push("/products")
     } else {
       // show alert
     }
@@ -58,7 +63,7 @@ function Login() {
         <div className="form-control">
           <label htmlFor="email">email</label>
           <input
-            type="text"
+            type="email"
             id="email"
             value={email}
             onChange={e => setEmail(e.target.value)} />
@@ -69,7 +74,7 @@ function Login() {
         <div className="form-control">
           <label htmlFor="password">password</label>
           <input
-            type="text"
+            type="password"
             id="password"
             value={password}
             onChange={e => setPassword(e.target.value)} />
@@ -78,7 +83,7 @@ function Login() {
 
         {!isMember && (
           <div className="form-control">
-            <label htmlFor="">username</label>
+            <label htmlFor="username">username</label>
             <input
               type="text"
               id="username"
@@ -108,17 +113,13 @@ function Login() {
 
         {/* register link */}
         <p className="register-link">
-          {isMember ? "Need To Register" : "Already A Member"}
+          {isMember ? "need to register" : "already a member"}
           <button type="button" onClick={toggleMember}>
             click here
           </button>
         </p>
-
-
-
       </form>
     </section>
   )
 }
-
 export default Login

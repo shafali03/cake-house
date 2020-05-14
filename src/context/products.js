@@ -14,15 +14,13 @@ function ProductProvider({ children }) {
 
   useEffect(() => {
     setLoading(true)
-    axios
-      .get(`${url}/products`)
-      .then(response => {
-        const featured = featuredProducts(response.data);
-        const products = flattenProducts(response.data)
-        setProducts(products)
-        setFeatured(featured)
-        setLoading(false)
-      })
+    axios.get(`${url}/products`).then(response => {
+      const featured = featuredProducts(flattenProducts(response.data));
+      const products = flattenProducts(response.data)
+      setProducts(products)
+      setFeatured(featured)
+      setLoading(false)
+    })
     return () => { }
   }, [])
 
