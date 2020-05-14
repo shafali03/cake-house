@@ -71,10 +71,9 @@ function CartProvider({ children }) {
   }
   // add to cart
   const addToCart = product => {
-    console.log(product)
-
     const { id, image, title, price } = product;
     const item = [...cart].find(item => item.id === id)
+
     if (item) {
       increaseAmount(id)
       return
