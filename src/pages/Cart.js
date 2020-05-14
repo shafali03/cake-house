@@ -1,13 +1,16 @@
 import React from 'react'
 import { CartContext } from '../context/cart'
+import { UserContext } from '../context/user'
+
 import EmptyCart from '../components/Cart/EmptyCart'
 import CartItem from '../components/Cart/CartItem'
 import { Link } from 'react-router-dom'
-// import { UserContext } from '../context/user'
 
 function Cart() {
-  let user = false
+
   const { cart, total } = React.useContext(CartContext)
+  const { user } = React.useContext(UserContext)
+
   console.log({ cart, total })
 
 
@@ -24,7 +27,7 @@ function Cart() {
 
       <h2>total : £ {total}</h2>
 
-      {user ? (
+      {user.token ? (
         <Link to="/checkout" className="btn btn-primary btn-block">
           Checkout
         </Link>
