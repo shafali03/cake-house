@@ -2,10 +2,12 @@
   --primaryColor: #04A777;
    --primaryDarkColor: #026F47;
    --mainBackground: #ececec;
+   --mainRed: #D63230;
    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
+  --mainWhite: #fff;
   --maxWidth: 40em;
   --smallWidth: 85vw;
   --fullWidth: 1170px;
@@ -376,9 +378,7 @@ Hero
     margin-top: 0;
   }
 
-  .hero h1 {
-    /* font-size: 1.3em; */
-  }
+  
   .hero p {
     font-size: 1.5em;
   }
@@ -495,4 +495,55 @@ Login Form
   display: inline-block;
   margin-left: 0.5em;
   cursor: pointer;
+}
+
+
+/* 
+===========
+Alert
+========== */
+
+.alert-container {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 10;
+  background: #2FBF71;
+  width: 24rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  border-radius: var(--mainBorderRadius);
+  transition: all 0.3s linear;
+}
+.alert-show {
+  display: block;
+}
+.alert-center {
+  position: relative;
+}
+.alert p {
+  margin-bottom: 0;
+  line-height: 2;
+}
+.alert-danger {
+  background: var(--mainRed);
+}
+.alert-close {
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  cursor: pointer;
+  line-height: 0;
 }

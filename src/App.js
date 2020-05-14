@@ -15,12 +15,13 @@ import ProductDetails from "./pages/ProductDetails"
 
 //! components
 import Header from "./components/Header"
-import CartItem from "./components/Cart/CartItem"
+import Alert from "./components/Alert"
 
 function App() {
   return (
     <Router>
       <Header />
+      <Alert />
       <Switch>
 
         <Route

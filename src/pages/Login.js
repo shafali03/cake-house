@@ -12,7 +12,7 @@ import { UserContext } from '../context/user'
 function Login() {
   const history = useHistory()
   // setup user context
-  const { userLogin } = React.useContext(UserContext)
+  const { userLogin, alert, showAlert } = React.useContext(UserContext)
 
   // state values
   const [email, setEmail] = React.useState('')
@@ -48,9 +48,15 @@ function Login() {
       } = response.data
       const newUser = { token, username }
       userLogin(newUser)
+      showAlert({
+        msg: `Hello you are logged in : ${username}`
+      })
       history.push("/products")
     } else {
-      // show alert
+      showAlert({
+        msg: `There was an error. Please try again ...`,
+        type: "danger"
+      })
     }
 
   }
