@@ -18,7 +18,20 @@ function Checkout(props) {
   const [error, setError] = React.useState('')
   const isEmpty = !name || alert.show
   async function handleSubmit(e) {
+    showAlert({ msg: "Submitting order... please wait" })
     e.preventDefault()
+    // get token
+    const response = await props.stripe
+      .createToken()
+      .catch(error => console.log(error))
+
+    const { token } = response
+    if (token) {
+      console.log(response)
+    } else {
+      hideAlert()
+      setError(response.error.message)
+    }
   }
   if (cart.length < 1) return <EmptyCart />
 
@@ -45,7 +58,7 @@ function Checkout(props) {
         <div className="stripe-input">
           <label htmlFor="card-element">Card or Debit Card</label>
           <p className="stripe-info">
-            Test using this card details : <span>4242 4242 4242</span>
+            Test using this card details : <span>4242 4242 4242 4242</span>
             <br />
           enter any 5 digits for the zip code
           <br />
