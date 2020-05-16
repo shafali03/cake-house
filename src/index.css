@@ -540,7 +540,7 @@ Alert
   z-index: 10;
   background: #2FBF71;
   width: 24em;
-  padding: 2.5rem 1.5em;
+  padding: 2.5em 1.5em;
   text-align: center;
   color: var(--mainWhite);
   font-size: 1.2em;
@@ -574,4 +574,37 @@ Alert
   right: 7px;
   cursor: pointer;
   line-height: 0;
+}
+
+
+/* 
+============ 
+Checkout
+============
+*/
+.checkout-form h3 span {
+  color: var(--primaryColor);
+}
+.stripe-info {
+  font-size: 80%;
+  margin-top: 0.5em;
+  color: var(--darkGrey);
+}
+.stripe-info span {
+  color: var(--primaryColor);
+}
+
+.card-element {
+  border: 2px solid var(--darkGrey);
+  padding: 0.5em;
+  font-size: 4em;
+  border-radius: var(--mainBorderRadius);
+}
+
+.checkout-form .form-empty {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.checkout-form button {
+  margin-top: 1em;
 }
