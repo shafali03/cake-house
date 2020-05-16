@@ -24,6 +24,12 @@ Set up Cloudinary
 yarn add strapi-provider-upload-cloudinary
 ```
 
+stripe
+
+```
+yarn add react-stripe-elements
+```
+
 
 
 
