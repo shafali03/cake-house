@@ -63,10 +63,6 @@ function Checkout(props) {
               submit
             </button>
           )}
-
-
-
-
       </form>
     </section>
   )
