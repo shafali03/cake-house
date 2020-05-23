@@ -27,7 +27,20 @@ function Checkout(props) {
 
     const { token } = response
     if (token) {
-      console.log(response)
+      setError('')
+      const { id } = token;
+      let order = await submitOrder({ name: name, total: total, items: cart, stripeTokenId: id, userToken: user.token })
+
+      if (order) {
+        showAlert({ msg: 'your order is complete' })
+        clearCart()
+        history.push('/')
+        return
+      }
+      else {
+        showAlert({ msg: 'there was an error with your order. please try again!', type: 'danger' })
+      }
+
     } else {
       hideAlert()
       setError(response.error.message)
