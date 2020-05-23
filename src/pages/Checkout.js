@@ -29,7 +29,13 @@ function Checkout(props) {
     if (token) {
       setError('')
       const { id } = token;
-      let order = await submitOrder({ name: name, total: total, items: cart, stripeTokenId: id, userToken: user.token })
+      let order = await submitOrder({
+        name: name,
+        total: total,
+        items: cart,
+        stripeTokenId: id,
+        userToken: user.token
+      })
 
       if (order) {
         showAlert({ msg: 'your order is complete' })
@@ -104,7 +110,7 @@ const CardForm = injectStripe(Checkout)
 const StripeWrapper = () => {
   return (
     <StripeProvider
-      apiKey="xxxxxx">
+      apiKey="pk_test_W6PyfbDoWxyyEOWntZGLoHDz00cG9wdwKq">
       <Elements>
         <CardForm></CardForm>
       </Elements>
