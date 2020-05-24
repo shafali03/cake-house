@@ -77,9 +77,9 @@ function Checkout(props) {
         <div className="stripe-input">
           <label htmlFor="card-element">Card or Debit Card</label>
           <p className="stripe-info">
-            Test using this card details : <span>4242 4242 4242 4242</span>
+            Test using this card details : <span>4000 0082 6000 0000</span>
             <br />
-          enter any 5 digits for the zip code
+          enter any 6 digits for the Postcode
           <br />
           enter any 3 digits for the CVC
         </p>
