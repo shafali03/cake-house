@@ -42,8 +42,7 @@ function Checkout(props) {
         clearCart()
         history.push('/')
         return
-      }
-      else {
+      } else {
         showAlert({ msg: 'there was an error with your order. please try again!', type: 'danger' })
       }
 
@@ -61,6 +60,7 @@ function Checkout(props) {
         <h3>
           order total : <span>£{total}</span>
         </h3>
+
         <div className="form-control">
           <label htmlFor="name">name</label>
           <input
@@ -72,7 +72,7 @@ function Checkout(props) {
             }}
           />
         </div>
-
+        {/* 4000 0082 6000 0000 */}
         {/* card element */}
         <div className="stripe-input">
           <label htmlFor="card-element">Card or Debit Card</label>
@@ -95,8 +95,10 @@ function Checkout(props) {
         {isEmpty ? (
           <p className="form-empty">please fill out name field</p>
         ) : (
-            <button type="submit" onClick={handleSubmit}
-              className="btn btn=primary btn-block">
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              className="btn btn-primary btn-block">
               submit
             </button>
           )}
@@ -110,7 +112,7 @@ const CardForm = injectStripe(Checkout)
 const StripeWrapper = () => {
   return (
     <StripeProvider
-      apiKey="pk_test_W6PyfbDoWxyyEOWntZGLoHDz00cG9wdwKq">
+      apiKey="pk_test_O6HDRHcJG8IKpwuZGnvPpaSR00lJoMP0T8">
       <Elements>
         <CardForm></CardForm>
       </Elements>
