@@ -8,9 +8,9 @@ function Hero({ children }) {
         <h1>
           Welcome To Cake House
         </h1>
-        <p>
-          All you need is Love and a cupcake
-        </p>
+        <h2>
+          Cakes for every occasion
+        </h2>
         {children}
       </div>
     </div>
