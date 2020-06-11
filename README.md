@@ -11,9 +11,9 @@ A Cake house is an e-commerce site which allows you to select cakes and add them
 ## Tech Used
 - React
 - CSS
-- strapi headless CMS
+- Strapi headless CMS
 - Cloudinary
-- stripe
+- Stripe
 - HeroKu
 - Netlify
 
