@@ -1,7 +1,7 @@
 
 # Cake House E-commerce site
 
-A Cake house is an e-commerce site which allows you to select cakes and add them to cart. You can also increase or decrease the quality of the products. Before you make a purchase, you need to create an account then add the card details. If the payment is successful, you will see a popup message will appear.
+A Cake house is an eCommerce site which allows users to select cakes and add them to cart. User can also increase or decrease the quality of the products. Before the user makes a purchase, they need to create an account then add the card details. If the payment is successful, the user will see a popup message will appear.
 
 ## Demo 
 
