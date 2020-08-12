@@ -1,8 +1,10 @@
 
 # Cake house eCommerce site
 
-A Cake House is an eCommerce site which allows users to select cakes and add items to cart. User can also increase or decrease the quantity of the items. Before the user makes a purchase, the user needs to register first, then logged. Once the user logged in the user can go to checkout and process the payment by entering the card details. The user will 
-see a popup message if the order is successful and the user will be redirected to the home page.
+A Cake House is an eCommerce site which allows users to select items and add to cart. 
+The user can increase or decrease the quantity of the items. Before the user makes a purchase, 
+the user needs to register first, then log in. Once the user logged in the user can go to checkout and process the payment by entering the card details. The user will see a popup message if the order is successful and the user redirected to the home page.
+
 
 ## Demo 
 
